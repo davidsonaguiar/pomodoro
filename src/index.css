@@ -1,0 +1,167 @@
+:root {
+  /* 
+  ** SIZE: font - margin - padding...
+  */
+  --size-3xs: 2px;
+  --size-2xs: 4px;
+  --size-sx: 8px;
+  --size-sm: 12px;
+  --size-bs: 16px;
+  --size-md: 20px;
+  --size-lg: 24px;
+  --size-lx: 32px;
+  --size-xl: 40px;
+  --size-2xl: 48px;
+  --size-3xl: 64px;
+
+  /*
+  ** SIZE: div - section - main...
+  */
+  --container-sx: 320px;
+  --container-sm: 480px;
+  --container-md: 640px;
+  --container-lg: 800px;
+  --container-lx: 960px;
+  --container-xl: 1120px;
+  --container-full: 100%;
+
+  /*
+  ** Backgrounds
+  */
+  --bg-stop: #FF6E5E;
+  --bg-working: #4ea630;
+  --bg-resting: #28B2FD;
+  --bg-pause: #E2C335;
+  --bg-white: #FFFFFF;
+
+  /*
+  ** border-color
+  */
+  --border-default: 2px solid #212121;
+
+  /*
+  ** text-color
+  */
+  --text-default: #333333;
+  --text-white: #FFFFFF;
+  --text-disabled: #BDBDBD;
+
+  /*
+  ** box-shadow
+  */
+  --shadow-default: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: var(--container-full);
+  min-height: 100vh;
+}
+
+body {
+  color: var(--text-default);
+  font-size: var(--size-bs);
+  font-family: 'Roboto', sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-working {
+  background-color: var(--bg-working);
+}
+
+.bg-resting {
+  background-color: var(--bg-resting);
+}
+
+.bg-stop {
+  background-color: var(--bg-stop);
+} 
+
+.bg-pause {
+  background-color: var(--bg-pause);
+}
+
+.bg-white {
+  background-color: var(--bg-white);
+}
+
+.hidden {
+  display: none;
+}
+
+.pomodoro {
+  width: var(--container-md);
+  padding: var(--size-xl);
+  
+  border: var(--border-default);
+  border-radius: var(--size-bs);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2  );
+  
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-lg);
+
+}
+
+.status {
+  font-size: var(--size-lg);
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.info {
+  text-align: center;
+  text-transform: uppercase;
+
+  display: flex;
+  justify-content: center;
+  gap: var(--size-sx);
+}
+
+.info > p {
+  padding: var(--size-sx) var(--size-sx); 
+  display: block;
+}
+
+.pomodoro .timer {
+  font-size: var(--size-3xl);
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+  gap: var(--size-lg);
+}
+
+.button {
+  padding: var(--size-sm) var(--size-md);
+
+  border-radius: var(--size-2xs);
+  border: var(--border-default);
+  box-shadow: var(--shadow-default);
+
+  color: var(--text-default);
+  font-size: var(--size-bs);
+  font-weight: 600;
+  letter-spacing: var(--size-3xs);
+  text-transform: uppercase;
+
+  flex: 1 0 0;
+  cursor: pointer;
+}
